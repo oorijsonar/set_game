@@ -11,7 +11,7 @@ def generate_deck():
 
 
 def deal(deck=None):
-    if not deck:
+    if deck is None:
         deck = generate_deck()
     return random.sample(deck, INITIAL_BOARD_SIZE)
 
