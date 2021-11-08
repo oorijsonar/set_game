@@ -9,3 +9,5 @@ Your algorithm needs to implement the Algorithm class.
 
 Check out all the options - `python main.py --help` 
 
+### Results
+1. BruteForce - Average time: 0.1293128089999997 seconds
