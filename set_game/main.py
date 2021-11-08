@@ -1,14 +1,9 @@
-import random
-
 from algorithm import BruteForce
-from deck import generate
-
-INITIAL_BOARD_SIZE = 12
+from dealer import deal
 
 
 def main():
-    deck = generate()
-    board = random.sample(deck, INITIAL_BOARD_SIZE)
+    board = deal()
     print(BruteForce(board).find())
 
 
