@@ -1,6 +1,6 @@
 import statistics
 from timeit import default_timer as timer
-
+from copy import deepcopy
 import click
 
 import algorithm
@@ -26,8 +26,9 @@ def main(algorithm_name, iterations):
 
     for _ in range(iterations):
         board = dealer.deal(deck)
+        board_copy = deepcopy(board)
         start_time = timer()
-        possible_set = algorithm_class(board).find()
+        possible_set = algorithm_class(board_copy).find()
         end_time = timer()
 
         # TODO: print the board in all the assert failure messages
