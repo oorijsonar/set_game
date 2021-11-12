@@ -39,7 +39,7 @@ def main(algorithm_name, iterations):
             assert algorithm.BruteForce(board).find() is None, 'Your algorithm didn\'t find a set that BruteForce did!'
         times.append(end_time - start_time)
 
-    print(f'Average time: {statistics.mean(times) * 1000} seconds')
+    print(f'Average time: {statistics.mean(times) * 1000} milliseconds')
 
 
 if __name__ == '__main__':
