@@ -54,8 +54,8 @@ class SetCompleter(Algorithm):
         return self.find()
 
     def _find_set_completer(self, card1, card2):
-        color = card1.color if card1.color == card2.color else (set(Color) - {card1.color, card2.color}).pop()
-        number = card1.number if card1.number == card2.number else (set(Number) - {card1.number, card2.number}).pop()
-        shading = card1.shading if card1.shading == card2.shading else (set(Shading) - {card1.shading, card2.shading}).pop()
-        shape = card1.shape if card1.shape == card2.shape else (set(Shape) - {card1.shape, card2.shape}).pop()
+        color = Color.get_set_completing_value(card1.color, card2.color)
+        number = Number.get_set_completing_value(card1.number, card2.number)
+        shading = Shading.get_set_completing_value(card1.shading, card2.shading)
+        shape = Shape.get_set_completing_value(card1.shape, card2.shape)
         return Card(color, number, shading, shape)
