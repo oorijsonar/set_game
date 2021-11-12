@@ -11,3 +11,4 @@ Check out all the options - `python main.py --help`
 
 ### Results
 1. BruteForce - Average time: 0.1293128089999997 seconds
+2. SetCompleter - Average time: 0.08413092700000084 seconds
